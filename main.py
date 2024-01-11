@@ -14,7 +14,8 @@ soup = BeautifulSoup(site.text, 'html.parser')
 # Atualize o seletor conforme necessário
 prices = soup.find('h4')
 
+# text split -1 pois no elemento o preço se encontra como ultima parte
 if prices is not None:
     print(prices.text.split()[-1])
 else:
-    print("Não foi possível encontrar o elemento com a classe especificada.")
+    print("Não foi possível encontrar o elemento especificado.")
